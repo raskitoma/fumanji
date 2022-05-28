@@ -40,21 +40,32 @@ def export_image(tf_img):
 def load_images(path):
     images = []
     for img_path in tf.io.gfile.glob(path):
+        # skip if not a jpg or png
+        if not img_path.endswith('.jpg') and not img_path.endswith('.png'):
+            continue
         img = load_image(img_path)
         images.append(img)
     return images
 
 # load random image from img folder 
 def load_random_image(path):
-    img_path = random.choice(tf.io.gfile.glob(path))
-    img = load_image(img_path)
-    return img
+    options = tf.io.gfile.glob(path)
+    # Choose random image and repeat if file is not an image
+    while True:
+        img_path = random.choice(options)
+        if not img_path.endswith('.jpg') and not img_path.endswith('.png'):
+            continue
+        img = load_image(img_path)
+        return img
 
 # load all images from /img folder
 images = load_images('img/*')
 
-# delete all files from /results folder
+# delete all files from /results folder except .gitignore
 for file in tf.io.gfile.glob('results/*'):
+    #skip if filename is .gitignore
+    if file == 'results/.gitignore':
+        continue
     tf.io.gfile.remove(file)
 
 # for each image, run the model and visualize the result using images and style_image
