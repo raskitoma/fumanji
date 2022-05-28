@@ -7,26 +7,11 @@ import PIL
 import datetime
 import random
 
-# function to load an image from a path using original size (no resize) any format
-# def load_image(path):
-#     img = tf.io.read_file(path), 
-#     img = tf.image.decode_image(img, channels=3)
-#     img = tf.image.convert_image_dtype(img, tf.float32)
-#     return img
-
-# def load_image(image_path, image_size=(2048, 2048)):
-#     img = tf.io.decode_image(
-#       tf.io.read_file(image_path),
-#       channels=3, dtype=tf.float32)[tf.newaxis, ...]
-#     img = tf.image.resize(img, image_size, preserve_aspect_ratio=True)
-#     return img
-
 def load_image(image_path):
     img = tf.io.decode_image(
       tf.io.read_file(image_path),
       channels=3, dtype=tf.float32)[tf.newaxis, ...]
     return img
-
 
 def visualize(images, titles=('',)):
     noi = len(images)
@@ -50,7 +35,6 @@ def export_image(tf_img):
         assert tf_img.shape[0] == 1
         img = tf_img[0]
     return PIL.Image.fromarray(img)
-
 
 # Function to load all images jpg or png on img folder
 def load_images(path):
@@ -105,6 +89,3 @@ for i in range(len(images)):
 
     # print execution time
     print("Execution time for: " + str(datetime.datetime.now() - begin_time))
-
-    # visualize the result
-    visualize([original_image, style_image, stylized_photo], titles=['Original Image', 'Style Image', 'Result Image'])
