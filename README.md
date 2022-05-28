@@ -1,7 +1,6 @@
-# Fumaji
+# Fumanji
 
 Applying a random picture style to a set of images preserving original image size.
-
 ## Code Quality
 
 [![Quality gate](https://sonarqube.raskitoma.com/api/project_badges/quality_gate?project=fumanji&token=8f5b74a0a7e0d8c4ee52972856268fa27bb8d5ed)](https://sonarqube.raskitoma.com/dashboard?id=fumanji)
