@@ -33,6 +33,15 @@ python fumanji.py
 
 > Take note that each time the script runs it will empty the **"results"** folder.
 
+## How to speed up process
+
+To speed up, if you have a NVIDIA GPU, you must install the following stuff:
+
+1. [NVIDIA CUDA Toolkit](https://developer.nvidia.com/cuda-downloads?target_os=Windows&target_arch=x86_64&target_version=11&target_type=exe_local) - Please, check before download, so you can download the one that suits your environment.
+2. [NVIDIA cuDNN(NVIDIA CUDA Neural Network Library)](https://developer.nvidia.com/cudnn) - Download, unpack and copy contents from **bin** to **NVIDIA CUDA Toolkit** folder (example: `C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v11.6\bin`)
+
+To download both CUDA and cuDNN, you need to have a NVIDIA Developer account.
+
 ## Improvements
 
 It is supposed that you can improve this script using CUDA.
