@@ -35,6 +35,8 @@ python fumanji.py
 
 ## How to speed up process
 
+> Tested on Windows
+
 To speed up, if you have a NVIDIA GPU, you must install the following stuff:
 
 1. [NVIDIA CUDA Toolkit](https://developer.nvidia.com/cuda-downloads?target_os=Windows&target_arch=x86_64&target_version=11&target_type=exe_local) - Please, check before download, so you can download the one that suits your environment.
@@ -43,6 +45,17 @@ To speed up, if you have a NVIDIA GPU, you must install the following stuff:
 To download both CUDA and cuDNN, you need to have a NVIDIA Developer account.
 
 > If you found some error at run, like Error 193, check if your CUDA version is compatible with cuDNN.  You must download/install compatible CUDA and cuDNN. Also check if your Tensorflow is compatible with your CUDA version.  Documentation suggest to use CUDA Toolkit 11.2 and cuDNN 8.1.0.
+
+## Speed up with Apple M1
+
+For this, you need to install Tensorflow for Mac.  The process is:
+
+1. Install Anaconda for Mac
+2. Install [Miniforge](https://github.com/conda-forge/miniforge): This allows to download packages precompiled for Apple Silicon (arm). Running: `curl -L -O "https://github.com/conda-forge/miniforge/releases/latest/download/Mambaforge-$(uname)-$(uname -m).sh"
+bash Mambaforge-$(uname)-$(uname -m).sh` or
+`wget "https://github.com/conda-forge/miniforge/releases/latest/download/Mambaforge-$(uname)-$(uname -m).sh"
+bash Mambaforge-$(uname)-$(uname -m).sh` should do the trick.
+3. Follow this article by *Prabat* with all the steps [here](https://caffeinedev.medium.com/how-to-install-tensorflow-on-m1-mac-8e9b91d93706)
 
 ## Improvements
 
