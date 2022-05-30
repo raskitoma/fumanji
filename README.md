@@ -23,17 +23,15 @@ Drop image styles into the **"styles"** folder.
 Run the script using the following command:
 
 ```bash
-fumanji.py
+python fumanji.py
 ```
 
 > The script will generate a set of images based on the content images and applying a random image style.
 > The generated images will be saved in the **"results"** folder.
-> {.is-info}
 
 ## Special info
 
 > Take note that each time the script runs it will empty the **"results"** folder.
-> {.is-warning}
 
 ## Improvements
 
