@@ -42,6 +42,8 @@ To speed up, if you have a NVIDIA GPU, you must install the following stuff:
 
 To download both CUDA and cuDNN, you need to have a NVIDIA Developer account.
 
+> If you found some error at run, like Error 193, check if your CUDA version is compatible with cuDNN.  You must download/install compatible CUDA and cuDNN. Also check if your Tensorflow is compatible with your CUDA version.
+
 ## Improvements
 
 It is supposed that you can improve this script using CUDA.
