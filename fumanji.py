@@ -408,7 +408,7 @@ for i in range(len(images)):
                 train_step(image)
                 print(".", end='', flush=True)
                 if step % 10 == 0:
-                    print("{}%".format(step), end='', flush=True)
+                    print("{}%".format(step-steps_per_epoch*n), end='', flush=True)
             print(" - Train step: {}".format(n+1))
         stylized_photo = image        
     
